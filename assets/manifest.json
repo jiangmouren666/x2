@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "name": "synthetic-preflight",
+      "type": "synthetic-test-fixture",
+      "path": "tests/fixtures/synthetic-preflight.json",
+      "source": "Generated deterministic arithmetic sequences",
+      "version": "public-dev0",
+      "sha256": "11bea61a2c374e441c18140a482b7e2b5e2aebf27454a3fa0bf7554ce330c754",
+      "acquisition": "Included in repository",
+      "conditions": "Offline tests only; no measured robot values",
+      "required_for_offline": true
+    }
+  ],
+  "excluded": [
+    "private diagnostics",
+    "internal connection configuration",
+    "model weights",
+    "manufacturer SDK and meshes",
+    "original handover documents",
+    "complete hardware controller"
+  ]
+}

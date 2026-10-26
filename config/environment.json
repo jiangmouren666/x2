@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project": "x2-demo",
+  "revision": "2026-10-26.4",
+  "checker_python_min": [3, 9],
+  "architectures": ["arm64", "aarch64", "x86_64", "amd64"],
+  "required_files": ["scripts/project.py", "scripts/environment_doctor.py", "config/environment.json", "requirements-dev.txt"],
+  "profiles": {
+    "offline": {
+      "description": "已验证的离线回归环境，不含仿真、推理服务或 ROS",
+      "systems": ["Darwin", "Linux"],
+      "python_min": [3, 12],
+      "python_max_exclusive": [3, 13],
+      "requirements_file": "requirements-dev.txt",
+      "imports": ["numpy"],
+      "commands": ["git", "ssh"],
+      "python_help": "使用 Python 3.12 新建 .venv；激活后安装 requirements-dev.txt，不复制其他电脑的虚拟环境。"
+    },
+    "inference": {
+      "description": "box openpi JAX 推理环境；不加载权重、不启动模型服务",
+      "systems": ["Linux"],
+      "python_min": [3, 11],
+      "python_max_exclusive": [3, 12],
+      "requirements_file": "requirements-inference-check.txt",
+      "imports": ["numpy", "jax", "jaxlib", "flax", "orbax.checkpoint", "torch", "openpi", "openpi_client"],
+      "commands": ["git", "nvidia-smi"],
+      "python_help": "使用 box 的 openpi Python 3.11 环境；新环境按对应源码 pyproject.toml 和 uv.lock 安装，不安装 offline 的 NumPy 2.x。"
+    },
+    "mujoco": {
+      "description": "X2 MuJoCo 3.2.3 场景与远程策略客户端；不连接推理服务",
+      "systems": ["Darwin", "Linux", "Windows"],
+      "python_min": [3, 10],
+      "python_max_exclusive": [3, 13],
+      "requirements_file": "requirements-mujoco.txt",
+      "imports": ["numpy", "mujoco", "msgpack", "websockets.sync.client", "typing_extensions"],
+      "commands": ["git", "ssh"],
+      "python_help": "使用独立 Python 3.10–3.12 仿真环境；安装 requirements-mujoco.txt，box 已有环境用 x2python。"
+    },
+    "ros": {
+      "description": "Ubuntu 22.04 / ROS 2 Humble 的 SDK 二次开发环境，不代表可运行抓取",
+      "systems": ["Linux"],
+      "os_release": {"ID": "ubuntu", "VERSION_ID": "22.04"},
+      "python_min": [3, 10],
+      "python_max_exclusive": [3, 11],
+      "imports": ["rclpy", "ament_index_python", "aimdk_msgs.msg", "aimdk_msgs.srv"],
+      "commands": ["git", "ssh", "ros2", "colcon"],
+      "ros_distro": "humble",
+      "ros_version": "2",
+      "python_help": "在 Ubuntu 22.04 用匹配 Humble 的 Python 3.10；退出离线 .venv，加载 ROS 和本机 SDK 的 install/local_setup.bash。"
+    }
+  }
+}

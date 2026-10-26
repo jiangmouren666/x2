@@ -1,0 +1,2 @@
+# Offline regression environment: Python 3.12; no ROS or robot drivers.
+numpy==2.3.5

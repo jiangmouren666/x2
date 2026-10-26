@@ -1,0 +1,25 @@
+{
+  "scope": "Public sanitized source fixtures only",
+  "files": [
+    {
+      "path": "tests/fixtures/controllers/robot_executor.py",
+      "sha256": "f0d8acdbbd50979393377fc604464f141f86f2ad34984697ef733b07a6c571a8",
+      "role": "AST-only extracted source fixture"
+    },
+    {
+      "path": "tests/fixtures/controllers/box_executor.py",
+      "sha256": "5bffad7bbf120f5d96a4326fec88750953ac0420cba1ec0225a9c3b1ffae4cd3",
+      "role": "AST-only extracted source fixture"
+    },
+    {
+      "path": "tests/fixtures/controllers/executor_candidate.py",
+      "sha256": "6f3bb55431d72efec25f183e3908a6f34be643f21e7d48124540e23045ad85fd",
+      "role": "AST-only extracted source fixture"
+    },
+    {
+      "path": "tests/fixtures/synthetic-preflight.json",
+      "sha256": "11bea61a2c374e441c18140a482b7e2b5e2aebf27454a3fa0bf7554ce330c754",
+      "role": "Synthetic input"
+    }
+  ]
+}

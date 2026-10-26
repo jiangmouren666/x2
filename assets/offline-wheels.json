@@ -1,0 +1,150 @@
+{
+  "numpy": {
+    "version": "2.3.5",
+    "metadata_source": "https://pypi.org/pypi/numpy/2.3.5/json",
+    "requires_dist": null,
+    "wheels": [
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-macosx_10_13_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/44/37/e669fe6cbb2b96c62f6bbedc6a81c0f3b7362f6a59230b23caa673a85721/numpy-2.3.5-cp312-cp312-macosx_10_13_x86_64.whl",
+        "digests": {
+          "blake2b_256": "4437e669fe6cbb2b96c62f6bbedc6a81c0f3b7362f6a59230b23caa673a85721",
+          "md5": "7d6e46498f1319109a07b1933ff7f115",
+          "sha256": "74ae7b798248fe62021dbf3c914245ad45d1a6b0cb4a29ecb4b31d0bfbc4cc3e"
+        }
+      },
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-macosx_11_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/c5/65/df0db6c097892c9380851ab9e44b52d4f7ba576b833996e0080181c0c439/numpy-2.3.5-cp312-cp312-macosx_11_0_arm64.whl",
+        "digests": {
+          "blake2b_256": "c565df0db6c097892c9380851ab9e44b52d4f7ba576b833996e0080181c0c439",
+          "md5": "03c135a28310a0c45b8ff811cdd529bb",
+          "sha256": "ee3888d9ff7c14604052b2ca5535a30216aa0a58e948cdd3eeb8d3415f638769"
+        }
+      },
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/5b/e1/1ee06e70eb2136797abe847d386e7c0e830b67ad1d43f364dd04fa50d338/numpy-2.3.5-cp312-cp312-macosx_14_0_arm64.whl",
+        "digests": {
+          "blake2b_256": "5be11ee06e70eb2136797abe847d386e7c0e830b67ad1d43f364dd04fa50d338",
+          "md5": "2fc232340945711c44b0408c7dd99b35",
+          "sha256": "612a95a17655e213502f60cfb9bf9408efdc9eb1d5f50535cc6eb365d11b42b5"
+        }
+      },
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-macosx_14_0_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/6d/9c/1ca85fb86708724275103b81ec4cf1ac1d08f465368acfc8da7ab545bdae/numpy-2.3.5-cp312-cp312-macosx_14_0_x86_64.whl",
+        "digests": {
+          "blake2b_256": "6d9c1ca85fb86708724275103b81ec4cf1ac1d08f465368acfc8da7ab545bdae",
+          "md5": "e21b1794e6f3964e0e487f85826c1ca6",
+          "sha256": "3101e5177d114a593d79dd79658650fe28b5a0d8abeb8ce6f437c0e6df5be1a4"
+        }
+      },
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/74/78/fcd41e5a0ce4f3f7b003da85825acddae6d7ecb60cf25194741b036ca7d6/numpy-2.3.5-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "7478fcd41e5a0ce4f3f7b003da85825acddae6d7ecb60cf25194741b036ca7d6",
+          "md5": "39702562982344424d8c405c7fb0a44a",
+          "sha256": "8b973c57ff8e184109db042c842423ff4f60446239bd585a5131cc47f06f789d"
+        }
+      },
+      {
+        "filename": "numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/b6/23/2a1b231b8ff672b4c450dac27164a8b2ca7d9b7144f9c02d2396518352eb/numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "digests": {
+          "blake2b_256": "b6232a1b231b8ff672b4c450dac27164a8b2ca7d9b7144f9c02d2396518352eb",
+          "md5": "de782dd125ea5f41fca0290526dcac03",
+          "sha256": "0d8163f43acde9a73c2a33605353a4f1bc4798745a8b1d73183b28e5b435ae28"
+        }
+      }
+    ]
+  },
+  "setuptools": {
+    "version": "80.9.0",
+    "metadata_source": "https://pypi.org/pypi/setuptools/80.9.0/json",
+    "requires_dist": [
+      "pytest!=8.1.*,>=6; extra == \"test\"",
+      "virtualenv>=13.0.0; extra == \"test\"",
+      "wheel>=0.44.0; extra == \"test\"",
+      "pip>=19.1; extra == \"test\"",
+      "packaging>=24.2; extra == \"test\"",
+      "jaraco.envs>=2.2; extra == \"test\"",
+      "pytest-xdist>=3; extra == \"test\"",
+      "jaraco.path>=3.7.2; extra == \"test\"",
+      "build[virtualenv]>=1.0.3; extra == \"test\"",
+      "filelock>=3.4.0; extra == \"test\"",
+      "ini2toml[lite]>=0.14; extra == \"test\"",
+      "tomli-w>=1.0.0; extra == \"test\"",
+      "pytest-timeout; extra == \"test\"",
+      "pytest-perf; sys_platform != \"cygwin\" and extra == \"test\"",
+      "jaraco.develop>=7.21; (python_version >= \"3.9\" and sys_platform != \"cygwin\") and extra == \"test\"",
+      "pytest-home>=0.5; extra == \"test\"",
+      "pytest-subprocess; extra == \"test\"",
+      "pyproject-hooks!=1.1; extra == \"test\"",
+      "jaraco.test>=5.5; extra == \"test\"",
+      "sphinx>=3.5; extra == \"doc\"",
+      "jaraco.packaging>=9.3; extra == \"doc\"",
+      "rst.linker>=1.9; extra == \"doc\"",
+      "furo; extra == \"doc\"",
+      "sphinx-lint; extra == \"doc\"",
+      "jaraco.tidelift>=1.4; extra == \"doc\"",
+      "pygments-github-lexers==0.0.5; extra == \"doc\"",
+      "sphinx-favicon; extra == \"doc\"",
+      "sphinx-inline-tabs; extra == \"doc\"",
+      "sphinx-reredirects; extra == \"doc\"",
+      "sphinxcontrib-towncrier; extra == \"doc\"",
+      "sphinx-notfound-page<2,>=1; extra == \"doc\"",
+      "pyproject-hooks!=1.1; extra == \"doc\"",
+      "towncrier<24.7; extra == \"doc\"",
+      "packaging>=24.2; extra == \"core\"",
+      "more_itertools>=8.8; extra == \"core\"",
+      "jaraco.text>=3.7; extra == \"core\"",
+      "importlib_metadata>=6; python_version < \"3.10\" and extra == \"core\"",
+      "tomli>=2.0.1; python_version < \"3.11\" and extra == \"core\"",
+      "wheel>=0.43.0; extra == \"core\"",
+      "platformdirs>=4.2.2; extra == \"core\"",
+      "jaraco.functools>=4; extra == \"core\"",
+      "more_itertools; extra == \"core\"",
+      "pytest-checkdocs>=2.4; extra == \"check\"",
+      "pytest-ruff>=0.2.1; sys_platform != \"cygwin\" and extra == \"check\"",
+      "ruff>=0.8.0; sys_platform != \"cygwin\" and extra == \"check\"",
+      "pytest-cov; extra == \"cover\"",
+      "pytest-enabler>=2.2; extra == \"enabler\"",
+      "pytest-mypy; extra == \"type\"",
+      "mypy==1.14.*; extra == \"type\"",
+      "importlib_metadata>=7.0.2; python_version < \"3.10\" and extra == \"type\"",
+      "jaraco.develop>=7.21; sys_platform != \"cygwin\" and extra == \"type\""
+    ],
+    "wheels": [
+      {
+        "filename": "setuptools-80.9.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl",
+        "digests": {
+          "blake2b_256": "a3dc17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772",
+          "md5": "51e62d1ca39b0e1b44385c363a9cef55",
+          "sha256": "062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922"
+        }
+      }
+    ]
+  },
+  "wheel": {
+    "version": "0.45.1",
+    "metadata_source": "https://pypi.org/pypi/wheel/0.45.1/json",
+    "requires_dist": [
+      "pytest>=6.0.0; extra == \"test\"",
+      "setuptools>=65; extra == \"test\""
+    ],
+    "wheels": [
+      {
+        "filename": "wheel-0.45.1-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/0b/2c/87f3254fd8ffd29e4c02732eee68a83a1d3c346ae39bc6822dcbcb697f2b/wheel-0.45.1-py3-none-any.whl",
+        "digests": {
+          "blake2b_256": "0b2c87f3254fd8ffd29e4c02732eee68a83a1d3c346ae39bc6822dcbcb697f2b",
+          "md5": "67835ab585e0d1522727173dd4b09eae",
+          "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+        }
+      }
+    ]
+  }
+}

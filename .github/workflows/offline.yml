@@ -1,0 +1,26 @@
+name: Offline baseline
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install locked dependencies and project
+        run: |
+          python -m pip install --require-hashes -r requirements-offline.lock
+          python -m pip install --no-deps --no-build-isolation -e .
+      - name: Same offline check used locally
+        run: python scripts/project.py check --profile offline --report runs/ci-offline.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-${{ matrix.os }}
+          path: runs/ci-offline.json

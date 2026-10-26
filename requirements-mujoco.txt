@@ -1,0 +1,6 @@
+# X2 simulation/client: separate environment from ROS and openpi server.
+mujoco==3.2.3
+numpy>=1.26,<3
+msgpack>=1.0.5
+websockets>=14,<18
+typing-extensions>=4.12.2
