@@ -34,6 +34,16 @@ python -m x2.planning.right_arm_preview \
 
 输出 JSON 记录时间序列和关节目标，标记 `executable=false`。它只生成离线数据，不连接或驱动机器人。输出文件已经存在时会拒绝覆盖；再次运行请换一个文件名。
 
+## 终端演示工作流
+
+安装完成后，一条命令串联环境检查、回归和合成右肘预览：
+
+```sh
+python scripts/demo_workflow.py offline
+```
+
+每次运行创建独立的 `runs/demo-offline-*` 目录，保存命令日志、检查报告和预览。另有已有图片提取和外部 MuJoCo 场景检查入口；参数、依赖、结果解释及故障处理见[终端操作手册](docs/DEMO_OPERATIONS.md)。这三个入口均不发送真机动作。
+
 ## 更新与协作
 
 只使用工具的人可以在没有本地改动的 main 分支运行 `git pull --ff-only` 获取更新，然后重新执行上面的依赖安装和检查命令。要复现某次结果，记录检查报告中的 Git 提交，使用 `git checkout 提交号` 或仓库已有的版本标签；不要只记录“最新版”。
@@ -52,7 +62,7 @@ python -m x2.planning.right_arm_preview \
 | `scripts/project.py` | 统一检查入口，无机器人连接操作 |
 | `.github/workflows/offline.yml` | 推送／PR 后运行相同检查；实际 CI 结果以 GitHub 为准 |
 
-35 项单元和回归测试之外，两组审计刻意复现已知控制逻辑缺陷，结果为 `REPRODUCED_KNOWN_DEFECT`。这不表示控制器健康或已通过真机停止测试；报告中的 `hardware_approved` 始终为 false。
+单元和回归测试之外，两组审计刻意复现已知控制逻辑缺陷，结果为 `REPRODUCED_KNOWN_DEFECT`。这不表示控制器健康或已通过真机停止测试；报告中的 `hardware_approved` 始终为 false。
 
 控制器仅保留测试所需函数和常量，供 AST 提取执行。`main` 片段只保留原来的 armed 拒绝条件与后续 init 顺序见证，不能用它判断完整控制器的其他入口。没有完整发布器、部署逻辑或可运行的硬件控制器。
 

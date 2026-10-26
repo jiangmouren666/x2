@@ -9,6 +9,7 @@
     "assets/offline-wheels.json",
     "config/environment.json",
     "config/source-lock.json",
+    "docs/DEMO_OPERATIONS.md",
     "docs/ENV_INFERENCE.md",
     "docs/ENV_MUJOCO.md",
     "docs/ENV_ROBOT_DEV.md",
@@ -21,6 +22,7 @@
     "scripts/audit_arm_only_hand_hold.py",
     "scripts/audit_stop_contract.py",
     "scripts/check_mujoco_scene.py",
+    "scripts/demo_workflow.py",
     "scripts/environment_doctor.py",
     "scripts/offline_check.py",
     "scripts/project.py",
@@ -39,6 +41,7 @@
     "tests/test_environment_doctor.py",
     "tests/unit/__init__.py",
     "tests/unit/test_baseline_integrity.py",
+    "tests/unit/test_demo_workflow.py",
     "tests/unit/test_error_budget.py"
   ]
 }
