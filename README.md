@@ -1,6 +1,6 @@
 # X2 离线开发工具
 
-公开脱敏的开发基线 `0.1.0.dev0`：离线右臂目标预览、误差预算算术、环境诊断和控制逻辑片段回归。没有真机运行入口，也不包含现场数据、内部连接地址、原始交接文档、SDK、模型权重或设备标定。
+公开脱敏的离线开发基线，Python 包版本 `0.1.0`：离线右臂目标预览、误差预算算术、环境诊断和控制逻辑片段回归。没有真机运行入口，也不包含现场数据、内部连接地址、原始交接文档、SDK、模型权重或设备标定。
 
 ## 安装与检查
 
@@ -19,6 +19,26 @@ python scripts/project.py check --profile offline
 首次获取依赖需要网络；安装完成后检查可以离线执行。报告保存在忽略的 `runs/` 中，记录 Git 版本、脏状态、源码和样本哈希、平台、依赖与测试结果。报告可能含运行机器路径，公开分享前需要检查内容。
 
 NumPy 及 editable 构建工具均锁定版本和 wheel SHA256。换电脑重新建立虚拟环境，不复制旧 .venv。只有包版本检查时，可用 `python scripts/project.py doctor --profile offline`。
+
+## 第一次实际使用
+
+检查通过后，用仓库的合成样本生成一个右肘目标预览：
+
+```sh
+mkdir -p runs
+python -m x2.planning.right_arm_preview \
+  --snapshot tests/fixtures/synthetic-preflight.json \
+  --output runs/right-elbow-preview.json \
+  --delta-deg 1 --max-rate-deg-s 0.5
+```
+
+输出 JSON 记录时间序列和关节目标，标记 `executable=false`。它只生成离线数据，不连接或驱动机器人。输出文件已经存在时会拒绝覆盖；再次运行请换一个文件名。
+
+## 更新与协作
+
+只使用工具的人可以在没有本地改动的 main 分支运行 `git pull --ff-only` 获取更新，然后重新执行上面的依赖安装和检查命令。要复现某次结果，记录检查报告中的 Git 提交，使用 `git checkout 提交号` 或仓库已有的版本标签；不要只记录“最新版”。
+
+继续开发时从 main 新建自己的分支，修改源码并运行统一检查，再提交 Pull Request。公开仓库任何人都可以下载；直接推送需要仓库协作者权限，没有写权限的人使用 Fork 和 Pull Request。GitHub Actions 的检查结果可在仓库 Actions 页面查看。
 
 ## 内容与边界
 

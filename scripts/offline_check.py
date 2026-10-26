@@ -60,7 +60,7 @@ def snapshot(root):
 
 def execute(root, output=None):
     root = Path(root).resolve()
-    report = dict(schema_version=1, version='0.1.0.dev0', profile='offline',
+    report = dict(schema_version=1, version='0.1.0', profile='offline',
                   created_utc=datetime.now(timezone.utc).isoformat(), root=str(root),
                   platform=dict(system=platform.system(), machine=platform.machine(), python=platform.python_version()),
                   scope='Offline arithmetic, previews, candidate AST regressions and environment diagnostics',
