@@ -2,6 +2,17 @@
 
 公开脱敏的离线开发基线，Python 包版本 `0.1.0`：离线右臂目标预览、误差预算算术、环境诊断和控制逻辑片段回归。没有真机运行入口，也不包含现场数据、内部连接地址、原始交接文档、SDK、模型权重或设备标定。
 
+## 四套环境从零搭建
+
+先看[环境搭建总入口](docs/ENVIRONMENTS.md)，选择机器与用途，再执行对应的安装、配置、检查和运行命令：
+
+- [离线 Python 开发与演示](docs/ENV_OFFLINE.md)
+- [Ubuntu 22.04 / ROS 2 Humble / AimDK](docs/ENV_ROBOT_DEV.md)
+- [GPU 服务器模型推理](docs/ENV_INFERENCE.md)
+- [MuJoCo 安装、渲染和策略回合](docs/ENV_MUJOCO.md)
+
+离线环境可仅凭公开仓库搭建；SDK、模型和 X2 仿真资源需另行取得，清单和验收范围在各页说明。
+
 ## 安装与检查
 
 使用 CPython 3.12。支持范围为 macOS arm64/x86_64，以及 Linux glibc 2.27+ 的 aarch64/x86_64；实际已完成的验证见检查报告，支持声明不代表所有平台都已验收。
